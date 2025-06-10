@@ -1,63 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #ffffff;
+  color: #222;
+  scroll-behavior: smooth;
 }
 
 header {
-  background-color: #003366;
+  background: linear-gradient(135deg, #003366, #0055a5);
   color: white;
-  padding: 2rem;
+  padding: 4rem 1rem;
   text-align: center;
 }
 
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+  opacity: 0.9;
+}
+
 nav {
-  background: #f0f0f0;
-  padding: 1rem;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 1rem;
+  background: #f8f9fa;
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav a {
   text-decoration: none;
   color: #003366;
-  font-weight: bold;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #003366;
+  color: white;
 }
 
 main {
   max-width: 900px;
   margin: auto;
-  padding: 2rem;
+  padding: 2rem 1rem;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 section {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
-.cv-item {
-  margin-bottom: 1.5rem;
+section h2 {
+  color: #003366;
+  margin-bottom: 1rem;
+  border-left: 4px solid #003366;
+  padding-left: 0.75rem;
+}
+
+.cv-item h3 {
+  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+}
+
+.cv-item p {
+  margin: 0.25rem 0;
 }
 
 .skills {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .skills li {
-  background: #e0e0e0;
-  display: inline-block;
-  margin: 0.2rem;
-  padding: 0.4rem 0.8rem;
-  border-radius: 5px;
+  background: #003366;
+  color: white;
+  padding: 0.4rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
 }
 
 footer {
   text-align: center;
-  padding: 1rem;
-  background: #003366;
-  color: white;
+  padding: 2rem 1rem;
+  background: #f1f1f1;
+  color: #555;
+  font-size: 0.9rem;
 }
