@@ -3,7 +3,7 @@ document.querySelectorAll('nav a').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
     const section = document.querySelector(link.getAttribute('href'));
-    var headerOffset = 100;
+    var headerOffset = 150;
     var elementPosition = section.getBoundingClientRect().top;
     var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
     //section.scrollIntoView({ behavior: 'smooth' });
